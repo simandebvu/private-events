@@ -1,0 +1,17 @@
+name: Push Container to Heroku
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v1
+      - uses: akhileshns/heroku-deploy@master
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "zim-twitter-clone"
+          heroku_email: "shingim1@gmail.com"
