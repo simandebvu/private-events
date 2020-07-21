@@ -9,7 +9,7 @@
   <h3 align="center">Private Events</h3>
 
   <p align="center">
-    This project consists of building a light weight version of Twitter.
+    This project consists of building a light weight version of Eventbrite.
     <br />
     <a href="https://github.com/simandebvu/private-events"><strong>Explore the docs »</strong></a>
     <br />
