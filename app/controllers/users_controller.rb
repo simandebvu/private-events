@@ -5,12 +5,17 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    current_user = User.find_by_name(session[:current_user_name])
+    # @current_user = User.find_by_name(session[:current_user_name]).name
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    # current_user1 = User.find_by_name(session[:current_user_name])
+    # current_user = current_user1.name
+    # #@events_by_user = current_user.events_by_user
+    # @events_by_user = current_user.events
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -29,6 +34,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        user = User.find_by(user_params)
+        session[:user_id] = user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -63,7 +70,9 @@ class UsersController < ApplicationController
   end
 
   def sign_in
-    @user_name = User.name
+    @user = User.new
+    @user_name = User.first.name
+    session[:current_user_name] = @user_name
   end
 
   private

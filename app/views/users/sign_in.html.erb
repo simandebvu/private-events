@@ -1,6 +1,6 @@
 <h1>log-in</h1>
-<%= form_with url:sign_in_path do |f| %>
-<%= f.text_field :name %>
+<%= form_with(model: @user, local: true) do |f| %>
+<%= f.text_field :name , value: @user_name %>
 <%= f.submit "log in" %>
 <% end %>
 <%= link_to 'Back', users_path %>
