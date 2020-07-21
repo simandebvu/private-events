@@ -13,5 +13,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@master
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "zim-twitter-clone"
+          heroku_app_name: "private-events-zw-usa"
           heroku_email: "shingim1@gmail.com"

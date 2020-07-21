@@ -33,7 +33,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://private-events-site.herokuapp.com/)
+[Live Demo Link](https://private-events-zw-usa.herokuapp.com/)
 
 
 <!-- INSTALLATION -->
