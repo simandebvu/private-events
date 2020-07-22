@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    # @current_user = User.find_by_name(session[:current_user_name]).name
+    @current_user = User.find_by_name(session[:current_user_name]).name
   end
 
   # GET /users/1
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       if @user.save
         user = User.find_by(user_params)
         session[:user_id] = user.id
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to events_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
