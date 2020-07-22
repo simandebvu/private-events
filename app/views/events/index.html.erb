@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Creator</th>
       <th>Title</th>
       <th>Description</th>
       <th>Date</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
+        <td><%= event.creator.name %></td>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.date %></td>

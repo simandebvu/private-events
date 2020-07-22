@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+  <% if current_user %>
+  Logged in as <%= current_user.name %> <br/>
+  <%= link_to "Log Out", log_out_path %>
+  <% else %>
+  <%= link_to "Sign_in", signin_path %>
+  <%= link_to "Sign Up", new_user_path %>
+  <% end %>
+  <%= yield %>
   </body>
 </html>
