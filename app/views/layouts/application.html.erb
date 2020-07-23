@@ -14,9 +14,10 @@
     <nav class="site-header sticky-top py-1">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
         <p class="py-2 d-none d-md-inline-block"> <%= link_to 'Home', users_path %></p>
+        <p class="py-2 d-none d-md-inline-block"> <%= link_to 'Events', events_path %></p>
         <% if current_user %>
-        <p class="py-2 d-none d-md-inline-block">User is: <%= current_user.name %> </p>
         <p class="py-2 d-none d-md-inline-block"> <%= link_to "Log Out", log_out_path %></p>
+        <p class="py-2 d-none d-md-inline-block"> <%= link_to 'My events', users_path + '/' + current_user.id.to_s%></p>
         <% else %>
         <p class="py-2 d-none d-md-inline-block"><%= link_to "Sign_in", signin_path %></p>
         <p class="py-2 d-none d-md-inline-block"><%= link_to "Sign Up", new_user_path %></p>

@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
-
-<h1>User: <%= @current_user%></h1>
-
+<% if current_user %>
+<h1>User: <%= current_user.name%></h1>
+<% else %>
+<h1>Sign in to participate in events</h1>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -15,8 +17,10 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
+        <% if current_user && current_user.name ==  user.name %>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
+  resources :events do
+    member do
+      post 'join', to: 'invitations#create' 
+      delete 'leave', to: 'invitations#destroy'
+    end
+  end
   resources :users
   resources :sessions
   root "application#home"

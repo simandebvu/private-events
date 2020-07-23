@@ -1,0 +1,8 @@
+<tr>
+  <td class="column"><div class="description">Description: <%= event.description %><div></td>
+  <td class="column">Date: <%= event.date.to_formatted_s(:long_ordinal)  %></td>
+  <td class="column">Creator: <%= event.creator.name %></td>
+  <td class="column "><%= delete(event) %></td>
+  <td class="column "><%= event_attendance_button(event) %></td>
+  <td class="column ">event: <%=link_to event.title, event%></td>
+</tr>

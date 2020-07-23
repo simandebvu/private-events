@@ -24,6 +24,8 @@
  <% @attendees.each do |attend| %>
  <% end %>
  </p>
-
+ <%= attend_event(@event) %>
+ <% if current_user && current_user.name ==  @event.creator.name %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+<% end %>
