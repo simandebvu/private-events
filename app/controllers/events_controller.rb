@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-    @attendees = @event.invitations
+    @attendees = @event.attendees
   end
 
   # GET /events/new

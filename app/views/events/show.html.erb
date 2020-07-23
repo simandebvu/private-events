@@ -19,15 +19,11 @@
   <strong>Creator:</strong>
   <%= @event.creator.name %>
 </p>
-
 <p>
-  <strong>invited people</strong>
-    <% @attendees.each do |attend| %>
-    <tr>
-        <td><%= attend.name %></td>
-      </tr>
-      <% end %>
-</p>
+ <strong>invited people</strong>
+ <% @attendees.each do |attend| %>
+ <% end %>
+ </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

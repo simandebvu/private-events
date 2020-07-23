@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-    belongs_to :creator, class_name: 'User'
-    has_many :attendees, through: :invitations, source: 'User'
-    has_many :invitations, foreign_key: :attended_event
+    has_many :invitations, foreign_key: 'attended_event'
+    has_many :attendees, through: :invitations, source: :attendee_id
+    belongs_to :creator, foreign_key: 'creator_id', class_name: 'User'
 end
