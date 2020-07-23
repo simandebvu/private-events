@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @events_made_by_current_user  = current_user.events
+    @upcoming_events = @user.attended_events.upcoming_events
+    @prev_events = @user.attended_events.previous_events
     # current_user1 = User.find_by_name(session[:current_user_name])
     # current_user = current_user1.name
     # #@events_by_user = current_user.events_by_user

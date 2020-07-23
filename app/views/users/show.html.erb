@@ -4,6 +4,13 @@
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
+<h3><%= @user.name.capitalize %>'s Events</h3>
+<% @events_made_by_current_user.each do  |e| %>
+<ul>
+<li><%= e.title%></li>
+</ul>
+<% end %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
