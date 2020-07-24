@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionHelper
   def home; end
 
-      private
+  private
 
   def logged_in_user
     if logged_in?
