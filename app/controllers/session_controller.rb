@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
-  def new
-  end
+  def new; end
+
   def create
     @user = User.find_by(name: params[:session][:name])
     if @user
@@ -13,8 +13,7 @@ class SessionController < ApplicationController
   end
 
   def destroy
-    log_out 
+    log_out
     redirect_to root_url
   end
-
 end

@@ -3,7 +3,7 @@ class InvitationsController < ApplicationController
 
   def create
     @events = Event.find(params[:id])
-    @attended_event = @events.invitations.build(attendee_id: current_user.id,  attended_event: @events) 
+    @attended_event = @events.invitations.build(attendee_id: current_user.id, attended_event: @events)
     if @attended_event.save
       redirect_to events_path, alert: 'you are'
     else
