@@ -22,7 +22,7 @@
 <p>
  <strong>invited people</strong>
  <% @attendees.each do |attend| %>
- <li><%= attend %></li>
+ <li><%= attend.name %></li>
  <% end %>
  </p>
  <%= attend_event(@event) %>
