@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: %i[show edit update destroy]
 
   # GET /users
   # GET /users.json
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @events_made_by_current_user  = @user.events
+    @events_made_by_current_user = @user.events
     @upcoming_events = @user.attended_events.upcoming_events
     @prev_events = @user.attended_events.previous_events
     # current_user1 = User.find_by_name(session[:current_user_name])
@@ -26,8 +26,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /users
   # POST /users.json
@@ -78,13 +77,14 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_params
+    params.require(:user).permit(:name)
+  end
 end
