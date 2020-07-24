@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionHelper
   def home; end
 
-      private
+  private
 
   def logged_in_user
     if logged_in?
@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
     else
       flash[:danger] = 'log in'
       redirect_to login_url
-      end
     end
-    end
+  end
+end
