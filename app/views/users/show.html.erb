@@ -25,7 +25,5 @@
 </ul>
 <% end %>
 
-<% if current_user && current_user.name ==  @user.name %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<% end %>
+<%= check_usere(current_user, @user)%>
 <%= link_to 'Back', users_path %>
