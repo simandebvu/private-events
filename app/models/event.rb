@@ -1,3 +1,4 @@
+
 class Event < ApplicationRecord
     has_many :invitations, foreign_key: :attendee_id
     has_many :attendees, through: :invitations, source: "attendee"
