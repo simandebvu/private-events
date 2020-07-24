@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
     else
       flash[:danger] = 'log in'
       redirect_to login_url
-      end
     end
-    end
+  end
+end
