@@ -1,6 +1,12 @@
-<h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Edit User</h1>
+    <div class = "form-group">
+    <%= render 'form', user: @user %>
+    </div>
+    <%= link_to 'Show', @user, class: "btn btn-success" %> 
+    <%= link_to 'Back', users_path, class: "btn btn-danger" %>
+  </div>
+</div>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>

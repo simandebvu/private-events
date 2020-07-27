@@ -3,6 +3,6 @@
         <td><%= event.title %></td>
         <td><div class="description"> <%= event.description %></div></td>
         <td><%= event.date.to_formatted_s %></td>
-        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Show', event , class: "btn btn-primary" %></td>
         <td class="column "><%= attend_event(event) %></td>
       </tr>

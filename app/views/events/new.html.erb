@@ -1,5 +1,9 @@
-<h1>New Event</h1>
-
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">New Event</h1>
 <%= render 'form', event: @event %>
 
-<%= link_to 'Back', events_path %>
+<%= link_to 'Back', events_path, class: "btn btn-info" %>
+  </div>
+</div>
+

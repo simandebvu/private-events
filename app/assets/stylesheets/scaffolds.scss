@@ -64,6 +64,13 @@
 // label {
 //   display: block; }
 
+body {
+  background-image: image-url('social.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
+}
+
 .site-header {
   background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
