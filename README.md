@@ -20,7 +20,7 @@
   </p>
 </p>
 
-![screenshot](/app-screenshot.png)
+![screenshot](app-screenshot.png)
 
 ## Built With
 
