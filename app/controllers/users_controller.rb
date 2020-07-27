@@ -13,10 +13,6 @@ class UsersController < ApplicationController
     @events_made_by_current_user = @user.events
     @upcoming_events = @user.attended_events.upcoming_events
     @prev_events = @user.attended_events.previous_events
-    # current_user1 = User.find_by_name(session[:current_user_name])
-    # current_user = current_user1.name
-    # #@events_by_user = current_user.events_by_user
-    # @events_by_user = current_user.events
     @user = User.find(params[:id])
   end
 

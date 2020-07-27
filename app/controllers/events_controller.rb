@@ -27,12 +27,6 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = current_user.events.build(event_params)
-    # User.find_by(name: session[:current_user_name])
-    # @current_user = User.where(name: session[:current_user_name])
-    # @current_user1 = @current_user.name
-
-    # @event = @current_user1.events.build(event_params)
-
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -65,12 +59,10 @@ class EventsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def event_params
     params.require(:event).permit(:title, :description, :date)
   end

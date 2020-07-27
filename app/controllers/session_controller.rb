@@ -13,7 +13,14 @@ class SessionController < ApplicationController
   end
 
   def destroy
-    log_out
+    session.delete(:user_id)
+    @current_user = nil
     redirect_to root_url
   end
+
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
 end
