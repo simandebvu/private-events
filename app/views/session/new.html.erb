@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h4>Log in</h4>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 form">
+  <div class="form-group">
+    <%= form_for(:session, url: signin_path) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <div class="form-group py-3">
+      <%= f.submit "Log me in!", class: "btn btn-primary "%>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+</div>
+

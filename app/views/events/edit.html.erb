@@ -1,0 +1,12 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Editing Event</h1>
+     <div class="form-group">
+        <%= render 'form', event: @event %>
+    </div>
+
+<%= link_to 'Show', @event, class: "btn btn-success" %> |
+<%= link_to 'Back', events_path, class: "btn btn-danger" %>
+  </div>
+</div>
+

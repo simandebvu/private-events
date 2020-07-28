@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Current Users</h1>
+
+<% if current_user %>
+<h5>Hello, <%= current_user.name.capitalize%> !</h5>
+<% else %>
+<h1>Sign in to participate in events</h1>
+<% end %>
+<table>
+  <tbody>
+    <% @users.each do |user| %>
+      <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= user.name.capitalize %></h5>
+        <%= link_to 'Show', user,class: "btn btn-primary" %>
+        <%= check_userd(current_user, user) %>
+        <%= check_usere(current_user, user) %>
+      </div>
+    </div>
+  </div>
+      
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= @event.title %></h1>
+    <p class="lead"> <%= @event.description %></p>
+    <div class="card">
+      <div class="card-body">
+        <p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+<p>
+  <strong>Creator:</strong>
+  <%= @event.creator.name %>
+</p>
+
+<p>
+ <strong>invited people</strong>
+ <% @attendees.each do |attend| %>
+ <li><%= attend.name %></li>
+ </p>
+      </div>
+    </div>
+
+ <% end %>
+ <br>
+ <br>
+ <%= attend_event(@event) %>
+<%= check_user(current_user, @event) %>
+<%= link_to 'Back', events_path, class: "btn btn-info" %>
+
+
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= @user.name.capitalize %></h1>
+<p>
+  
+</p>
+<h3><%= @user.name.capitalize %>'s Events Created</h3>
+<% @events_made_by_current_user.each do  |e| %>
+<ul class="list-group">
+  <li class="list-group-item"><%= e.title%></li>
+</ul>
+<% end %>
+
+<h3><%= @user.name.capitalize %>'s Upcoming Events</h3>
+<% @upcoming_events.each do  |e| %>
+<ul class="list-group">
+  <li class="list-group-item"><%= e.title%></li>
+</ul>
+<% end %>
+
+<h3><%= @user.name.capitalize %>'s Pasts Events</h3>
+<% @prev_events.each do  |e| %>
+<ul class="list-group">
+  <li class="list-group-item"><%= e.title%></li>
+</ul>
+<% end %>
+
+<%= check_usere(current_user, @user)%>
+<%= link_to 'Back', users_path %>
+  </div>
+</div>
+

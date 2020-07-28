@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1 class="display-4">Sign In!</h1>
+<h1>log-in</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+<%= f.text_field :name , value: @user_name %>
+<%= f.submit "log in" %>
+<% end %>
+<%= link_to 'Back', users_path %>
+</div>
