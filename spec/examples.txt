@@ -1,15 +1,19 @@
-example_id                              | status | run_time        |
---------------------------------------- | ------ | --------------- |
-./spec/models/event_spec.rb[1:1:1]      | passed | 0.02192 seconds |
-./spec/models/event_spec.rb[1:1:2]      | passed | 0.01049 seconds |
-./spec/models/event_spec.rb[1:2:1]      | passed | 0.00796 seconds |
-./spec/models/event_spec.rb[1:2:2]      | passed | 0.00496 seconds |
-./spec/models/event_spec.rb[1:2:3]      | passed | 0.00537 seconds |
-./spec/models/event_spec.rb[1:2:4]      | passed | 0.00782 seconds |
-./spec/models/invitation_spec.rb[1:1:1] | passed | 0.0046 seconds  |
-./spec/models/invitation_spec.rb[1:1:2] | passed | 0.00489 seconds |
-./spec/models/invitation_spec.rb[1:2:1] | passed | 0.05241 seconds |
-./spec/models/user_spec.rb[1:1:1]       | passed | 0.00316 seconds |
-./spec/models/user_spec.rb[1:1:2]       | passed | 0.10182 seconds |
-./spec/models/user_spec.rb[1:2:1]       | passed | 0.00793 seconds |
-./spec/models/user_spec.rb[1:2:2]       | passed | 0.01914 seconds |
+example_id                                  | status | run_time        |
+------------------------------------------- | ------ | --------------- |
+./spec/features/event_creation_spec.rb[1:1] | passed | 11.2 seconds    |
+./spec/features/event_creation_spec.rb[1:2] | passed | 10.27 seconds   |
+./spec/features/login_spec.rb[1:1]          | passed | 3.04 seconds    |
+./spec/features/login_spec.rb[1:2]          | passed | 6.07 seconds    |
+./spec/models/event_spec.rb[1:1:1]          | passed | 0.0085 seconds  |
+./spec/models/event_spec.rb[1:1:2]          | passed | 0.01948 seconds |
+./spec/models/event_spec.rb[1:2:1]          | passed | 0.00854 seconds |
+./spec/models/event_spec.rb[1:2:2]          | passed | 0.00777 seconds |
+./spec/models/event_spec.rb[1:2:3]          | passed | 0.00839 seconds |
+./spec/models/event_spec.rb[1:2:4]          | passed | 0.01173 seconds |
+./spec/models/invitation_spec.rb[1:1:1]     | passed | 0.01903 seconds |
+./spec/models/invitation_spec.rb[1:1:2]     | passed | 0.00753 seconds |
+./spec/models/invitation_spec.rb[1:2:1]     | passed | 0.02812 seconds |
+./spec/models/user_spec.rb[1:1:1]           | passed | 0.01556 seconds |
+./spec/models/user_spec.rb[1:1:2]           | passed | 0.00424 seconds |
+./spec/models/user_spec.rb[1:2:1]           | passed | 0.01097 seconds |
+./spec/models/user_spec.rb[1:2:2]           | passed | 0.01026 seconds |
