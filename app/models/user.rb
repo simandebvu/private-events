@@ -6,9 +6,9 @@ class User < ApplicationRecord
   has_many :events, foreign_key: :creator_id, dependent: :delete_all
   has_many :invitations, foreign_key: 'attendee_id'
   has_many :attended_events, through: :invitations, foreign_key: 'attended_event_id'
+  validates :name, presence: true, length: { minimum: 4, maximum: 20 }
 
   def attending?(event)
-    p attended_events.include?(event)
     attended_events.include?(event)
   end
 end
